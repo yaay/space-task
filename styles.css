@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Marcellus&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sec-font: 'Marcellus', serif;
+    --sec-color: #c8cedd;
+  }
+
+
+body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.header {
+    display: flex;
+    position: fixed;
+    flex-direction: row-reverse;
+    align-items: center;
+    float: right;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* Make the navbar fixed at the top */
+    /* position: sticky; */
+    /* Make the navbar occupy half full width of the screen to the right */
+    /* width: 50%; */
+    gap: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    height: 4.7rem;
+    padding-right: 5rem;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+
+.nav-elm {
+    color: aliceblue;
+    /* display: inline; */
+    /* float: right; */
+    text-decoration: none;
+    font-weight: 700;
+    /* font-size: 14px; */
+}
+
+.nav-elm > p {
+    display: inline;
+}
+
+.nav-elm > p > span {
+    font-weight: 300;
+    margin-left: 4px;
+}
+
+.nav-elm:hover p {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 1.2rem;
+    /* position: absolute; */
+    /* color: #fff; */
+    /* text-decoration: none; */
+}
+
+.line {
+    border: 1px solid rgba(255,255,255,.25); 
+    width: 55vw;
+    height: 0;
+    margin-right: -2rem;
+    margin-top: 2rem;
+    z-index: 1;
+
+}
+
+.logo {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5rem 1rem 2rem 2rem;
+}
+
+
+
+.logo > img {
+    width: 40px;
+    height: auto;
+    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%); */
+    /* margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem; */
+    /* z-index: 1; */
+}
+
+.home {
+    background-image: url(assets/images/earth-hero.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.home-hero {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100%; */
+    text-align: center;
+    color: #fff;
+    padding-top: 10rem;
+}
+
+.home-hero > p:nth-child(2) {
+    font-size: 7rem;
+    letter-spacing: 0.7rem;
+    font-family: 'Marcellus', serif;    
+    }
+
+.home-hero > p:nth-child(3) {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.circle {
+    margin: 4rem 0 4rem 0;
+    background: white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Marcellus', serif;
+    font-size: 1.7rem;
+}
+
+.circle:hover {
+    background: rgb(5, 26, 73, 0.7);
+    color: goldenrod;
+    transition: all 0.5s ease-in-out;
+}
+
+.destaination {
+    background-image: url(assets/images/galaxy-hero.jpg);
+    background-size:contain;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "mars-tagline mars-tagline"
+                         "planet-mars  mars-text";
+    padding: 10rem 5rem 5rem 5rem;
+    color: aliceblue;
+    /* align-items:center; */
+}
+
+.mars-tagline {
+    grid-area: mars-tagline;
+    /* width: 100%; */
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    font-weight: 300;
+}
+
+.mars-tagline > p {
+    display: inline;
+    color: #444853;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.planet-mars {
+    grid-area: planet-mars;
+    /* align-self: center; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 2rem;
+}
+
+.planet-mars > img {
+    width: 25rem;
+    height: 25rem;
+}
+
+.mars-text {
+    grid-area: mars-text;
+    /* align-self: center; */
+    margin-left: 7rem;
+}
+
+.planets-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    color: #c8cedd;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0.4rem 0 0.4rem 0.6rem;
+    border-radius: 2rem;
+    max-width: 47%;
+}
+
+
+.planet:hover {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    /* padding-bottom: 1rem; */
+}
+
+.mars-hero {
+    margin-top: 2rem;
+    font-family: 'Marcellus', serif;
+    font-size: 5.5rem; 
+}
+
+.mars-line {
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    width: 25rem;
+    margin-top: 1rem;
+}
+
+.mars-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.mars-description {
+    color: #c8cedd;
+}
+
+.mars-distance > p, .mars-timetravel > p {
+    font-size: 0.8rem;
+}
+
+.mars-distance > p:nth-child(2), .mars-timetravel > p:nth-child(2) {
+    font-family: 'Marcellus', serif;
+    font-size: 1.5rem;   
+}
+
+.crew {
+    background-image: url(assets/images/crew-hero.jpg);
+    background-size: cover;
+    /* transform: scaleY(-1); */
+    height: 100%;
+    width: 100%;
+    /* padding: 10rem 5rem 0 5rem; */
+    color: white;
+    padding: 10rem 5rem 5rem 9rem;
+}
+
+.crew-tagline {
+    font-size: 1.5rem;
+    /* margin-left: 4rem; */
+    font-weight: 300;
+}
+
+.crew-tagline > p {
+    display: inline;
+    color: #444853;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.crew-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+.crew-text {
+    margin-top: 5rem;
+    color: #c8cedd;
+    font-size: 1.5rem;
+    font-family: var(--sec-font);
+}
+
+.crew-text p{
+    margin-bottom: 1rem;
+}
+
+.crew-text p:nth-child(2) {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.crew-text p:nth-child(3) {
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serifs;
+}
+
+.aa-image > img {
+    width: 20rem;
+    height: auto;
+
+}
+
+.dots {
+    display: flex;
+    gap: 1.5rem;
+    /* margin-top: 3rem; */
+}
+
+.dot {
+    border-radius: 50%;
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.dots p:nth-child(4) {
+    background-color: rgb(255, 255, 255);
+}
+
+.technology {
+    background-image: url(assets/images/technology.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /* padding: 10rem 5rem 0 5rem; */
+    color: white;
+}
+
+.tech-tagline {
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    font-weight: 300;
+}
+
+.tech-tagline > p {
+    display: inline;
+    color: #444853;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+
+.tech-nums > div {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    background-color: rgb(0, 0, 0, 0.4);
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-family: 'Marcellus', serif;
+    font-size: 1.4rem;
+
+}
+
+.tech-nums > div:hover {
+    background-color: rgba(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+    color: black;
+}
+
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    gap: 5rem;
+    /* padding-bottom: 10rem; */
+}
+
+.rocket-image > img {
+    width: 20rem;
+    height: auto;
+    /* margin-left: 38rem; */
+    /* position: absolute; */
+    /* right: 0; */
+}
+
+.bg-shadow {
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    padding: 10rem 5rem 5rem 5rem;
+}
+
+.tech-text > p {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--sec-color);
+}
+
+.tech-text > p:nth-child(2) {
+    /* font-weight: 700; */
+    font-family: var(--sec-font);
+    font-size: 3.2rem;
+    /* margin-top: 1rem; */
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    /* margin-top: 0; */
+    align-items: normal;
+    justify-content: space-between;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 1rem;
+  }
+
+  .nav {
+    /* width: 50%; */
+    font-size: small;
+    margin-top: 0;
+    height: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+
+  .nav-elm > p{
+    display: flex;
+  }
+  .destaination {
+    height: 100%;
+    padding: 2.5rem;
+    grid-template-areas: "mars-tagline"
+                         "planet-mars"
+                         "mars-text";
+
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+
+  .mars-text {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mars-tagline {
+    margin: 0;
+  }
+
+  .planet-mars {
+    margin: 0;
+  }
+
+  .planet-mars > img {
+    width: 350px;
+    height: auto;
+  }
+
+  .planets-list {
+    width: 35rem;
+  }
+
+  .crew {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crew-text {
+    margin-top: 0;
+  }
+
+  .crew-items {
+    flex-direction: column-reverse;
+    align-content: center;
+    /* gap: 3rem; */
+  }
+
+  .aa-image {
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .crew-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .crew-text p:nth-child(2) {
+    text-align: center;
+  }
+
+  .technology {
+    padding: 0;
+  }
+  .bg-shadow {
+    padding: 2rem 0 2rem 0;
+  }
+
+  .tech-container {
+    margin: 3rem 3rem 3rem 3rem ;
+  }
+
+  .tech-text {
+    text-align: center;
+  }
+
+  .tech-nums {
+    display: none;
+  }
+}
